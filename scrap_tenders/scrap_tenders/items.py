@@ -5,10 +5,13 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy.item import Item, Field
 
 
-class ScrapTendersItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class StackItem(Item):
+    Tender_Notice_Type = Field()
+    Country = Field()
+    Category = Field()
+    Description = Field()
+    Deadline = Field()
+    Ref = Field()
