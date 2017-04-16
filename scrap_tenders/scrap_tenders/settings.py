@@ -71,7 +71,8 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'scrap_tenders.pipelines.ScrapTendersPipeline': 300,
+    'scrap_tenders.pipelines.ClassifyTendersPipeline': 200,
+    'scrap_tenders.pipelines.ScrapTendersPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
