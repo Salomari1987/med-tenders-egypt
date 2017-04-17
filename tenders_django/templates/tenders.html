@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Tenders</h1>
+    {% for tender in Tenders %}
+      <h2> {{ tender.Description }} </h2>
+      <h2> {{ tender.classification }} </h2>
+      <p>{{ tender.Category }}</p>
+      <p>{{ tender.Country }}</p>
+      <p>{{ tender.Tender_Notice_Type }}</p>
+      <p>{{ tender.Ref }}</p>
+    {% endfor %}
+  </body>
+</html>

@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+APP_DIR = os.path.realpath('.')
 
 # Application definition
 
@@ -55,7 +56,9 @@ ROOT_URLCONF = 'tenders_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join( APP_DIR, 'templates' )
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
