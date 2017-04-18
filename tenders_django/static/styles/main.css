@@ -6,10 +6,17 @@
 	list-style-type: none;
 }
 
-a {
-	color: #0065b8;
-}
-
 .description-offer {
 	padding: 10px;
+}
+
+.welcome {
+  position: absolute;
+  padding: 100px;
+  top: 20%;
+  text-align: center;
+}
+
+a.btn-wide {
+  min-width: 200px;
 }
