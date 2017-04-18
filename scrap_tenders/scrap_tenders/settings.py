@@ -11,9 +11,13 @@
 import sys
 import os
 
-sys.path.append('/Users/salomari/private/med-tenders/med-tenders-egypt/tenders_django')
+tenders_django_path = os.path.join(os.path.abspath('../..'), 'tenders_django/')
+sys.path.append(tenders_django_path)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'tenders_django.settings'
 
+
+classifier_path = os.path.join(os.path.abspath('.'), 'classifier/')
+sys.path.append(classifier_path)
 
 BOT_NAME = 'scrap_tenders'
 
