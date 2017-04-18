@@ -9,5 +9,5 @@ class Tender(models.Model):
     Category = models.CharField(max_length=250)
     Description = models.CharField(max_length=250)
     Deadline = models.CharField(max_length=250)
-    Ref = models.CharField(max_length=250)
+    Ref = models.CharField(max_length=250, unique=True)
     classification = models.CharField(max_length=100)
