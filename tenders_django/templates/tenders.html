@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-    <h1>Tenders</h1>
+{% extends "layout.html" %}
+  {% block content %}
+    <h4> Displaying <b>{{Tenders.count}}</b> Tenders </h4>
     {% for tender in Tenders %}
-      <h2> {{ tender.Description }} </h2>
-      <h2> {{ tender.classification }} </h2>
-      <p>{{ tender.Category }}</p>
-      <p>{{ tender.Country }}</p>
-      <p>{{ tender.Tender_Notice_Type }}</p>
-      <p>{{ tender.Ref }}</p>
+    <div class="container-fluid" class="col-xs-12">
+    	<div class="row" style="border:grey solid 1px; margin:10px;">
+    		<div class="col-xs-6 description-offer">
+    			<ul class="no-bullets">
+    				<li>
+    					<span class="h3">
+                {{ tender.Description }}
+              </span>
+    				</li>
+    				<li style="padding:10px;">
+    					<b>Classification: {{ tender.classification }}</b>
+    				</li>
+    				<li style="padding:10px;">
+    					<span style="color:#800000"> Category: {{ tender.Category }} </span>
+    				</li>
+    			</ul>
+    		</div>
+    		<div class="col-xs-6 description-offer">
+    			<ul class="text-right no-bullets">
+    				<li class="h3" style="margin-top:0; color:#0065b8">
+              Ref no. {{ tender.Ref }}
+    				</li>
+    				<li style="color:#800000">
+    					<span>  Notice type: {{ tender.Tender_Notice_Type }}</span>
+    				</li>
+    				<li style="color:#800000">
+              <span>  Country: {{ tender.Country }} </span>
+    				</li>
+    			</ul>
+    		</div>
+      </div>
+    </div>
     {% endfor %}
-  </body>
-</html>
+  {% endblock %}
